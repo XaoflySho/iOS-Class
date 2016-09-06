@@ -35,4 +35,11 @@
  */
 + (NSString *)stringByJSONObject:(id)JSONObject;
 
+/*!
+ * @brief 把格式化的JSON格式的字符串转换成字典
+ * @param JSONString JSON格式的字符串
+ * @return NSDictionary 返回字典
+ */
++ (NSDictionary *)dictionaryByJSONString:(NSString *)JSONString;
+
 @end

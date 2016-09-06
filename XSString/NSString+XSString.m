@@ -60,4 +60,37 @@
     
 }
 
+/*!
+ * @brief 把格式化的JSON格式的字符串转换成字典
+ * @param JSONString JSON格式的字符串
+ * @return 返回字典
+ */
++ (NSDictionary *)dictionaryByJSONString:(NSString *)JSONString {
+    
+    JSONString =[JSONString stringByTrimmingCharactersInSet:[NSCharacterSet controlCharacterSet]];
+    
+    if (JSONString == nil) {
+        
+        return nil;
+        
+    }
+    
+    NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error;
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:JSONData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&error];
+    
+    if(error) {
+        
+        NSLog(@"JSON解析失败：%@",error);
+        
+        return nil;
+        
+    }
+    
+    return dictionary;
+    
+}
+
 @end
