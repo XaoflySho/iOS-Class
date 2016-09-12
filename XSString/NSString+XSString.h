@@ -42,4 +42,18 @@
  */
 + (NSDictionary *)dictionaryByJSONString:(NSString *)JSONString;
 
+/*!
+ 对字符串进行SHA1计算
+ 
+ @return NSString 计算结果
+ */
+- (NSString *) sha1;
+
+/*!
+ 对字符串进行MD5计算
+ 
+ @return NSString 计算结果
+ */
+- (NSString *) md5;
+
 @end
