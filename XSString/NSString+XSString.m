@@ -112,10 +112,7 @@
 }
 
 - (NSString *) md5 {
-    
-    //    const char *cStr = [self UTF8String];
-    //    unsigned char digest[CC_MD5_DIGEST_LENGTH];
-    
+
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     
     uint8_t digest[CC_MD5_DIGEST_LENGTH];
