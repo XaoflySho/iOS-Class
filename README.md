@@ -20,3 +20,15 @@
 + (NSString *)stringByJSONObject:(id)JSONObject;
 ```
 
+
+**对字符串进行SHA1计算**
+
+```objective-c
+- (NSString *) sha1;
+```
+
+**对字符串进行MD5计算**
+
+```objective-c
+- (NSString *) md5;
+```
