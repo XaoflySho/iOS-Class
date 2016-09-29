@@ -32,3 +32,10 @@
 ```objective-c
 - (NSString *) md5;
 ```
+
+**手机号码判断**
+
+```objective-c
++ (BOOL)isMobileNumber:(NSString *)mobileNum
+```
+

@@ -56,4 +56,13 @@
  */
 - (NSString *) md5;
 
+
+/**
+ 手机号码判断
+
+ @param mobileNum 手机号
+
+ @return 是否为手机号
+ */
++ (BOOL)isMobileNumber:(NSString *)mobileNum;
 @end
