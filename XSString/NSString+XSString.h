@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (XSString)
 
@@ -65,4 +66,16 @@
  @return 是否为手机号
  */
 + (BOOL)isMobileNumber:(NSString *)mobileNum;
+
+
+/**
+ 计算字符串大小
+
+ @param string 需要计算的字符串
+ @param width 最大宽度
+ @param fontSize 最大高度
+ @return 计算结果
+ */
++ (CGSize)textSizeWithString:(NSString *)string SizeWidth:(CGFloat)width fontSize:(CGFloat)fontSize;
+
 @end
