@@ -69,11 +69,12 @@
 
 
 /**
- 计算字符串大小
+ 计算字符串大小（系统字体）
 
  @param string 需要计算的字符串
  @param width 最大宽度
- @param fontSize 最大高度
+ @param high 最大高度
+ @param fontSize 字号大小
  @return 计算结果
  */
 + (CGSize)textSizeWithString:(NSString *)string maxWidth:(CGFloat)width maxHigh:(CGFloat)high fontSize:(CGFloat)fontSize;
