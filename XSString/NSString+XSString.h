@@ -76,6 +76,6 @@
  @param fontSize 最大高度
  @return 计算结果
  */
-+ (CGSize)textSizeWithString:(NSString *)string SizeWidth:(CGFloat)width fontSize:(CGFloat)fontSize;
++ (CGSize)textSizeWithString:(NSString *)string maxWidth:(CGFloat)width maxHigh:(CGFloat)high fontSize:(CGFloat)fontSize;
 
 @end

@@ -176,9 +176,9 @@
 }
 
 #pragma mark - 字符串大小获取
-+ (CGSize)textSizeWithString:(NSString *)string SizeWidth:(CGFloat)width fontSize:(CGFloat)fontSize {
++ (CGSize)textSizeWithString:(NSString *)string maxWidth:(CGFloat)width maxHigh:(CGFloat)high fontSize:(CGFloat)fontSize {
     
-    CGSize textSize = [string boundingRectWithSize:CGSizeMake(width, MAXFLOAT)
+    CGSize textSize = [string boundingRectWithSize:CGSizeMake(width, high)
                                            options:NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin
                                         attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]}
                                            context:nil].size;
