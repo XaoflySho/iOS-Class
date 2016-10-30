@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="在这里输入要生成二维码的内容" translatesAutoresizingMaskIntoConstraints="NO" id="xN4-hc-e8e">
+                                <rect key="frame" x="16" y="28" width="343" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vnF-i3-Sv4">
+                                <rect key="frame" x="16" y="266" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vnF-i3-Sv4" secondAttribute="height" multiplier="1:1" id="TWO-FB-cSP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dlu-E2-mtu">
+                                <rect key="frame" x="16" y="228" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1L4-6p-0Hk"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bR2-Di-Uz2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-NO-ckU">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SsO-aQ-XbQ"/>
+                                </constraints>
+                                <state key="normal" title="保存到相册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveQRCodeToPhotosAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwf-iv-Z0g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dlu-E2-mtu" firstAttribute="leading" secondItem="xN4-hc-e8e" secondAttribute="leading" id="6NO-q9-cj7"/>
+                            <constraint firstItem="vnF-i3-Sv4" firstAttribute="top" secondItem="Dlu-E2-mtu" secondAttribute="bottom" constant="8" id="6mO-vm-2h1"/>
+                            <constraint firstItem="xN4-hc-e8e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="8aa-2U-Ewp"/>
+                            <constraint firstItem="2Cm-NO-ckU" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CIb-10-bjV"/>
+                            <constraint firstItem="vnF-i3-Sv4" firstAttribute="leading" secondItem="xN4-hc-e8e" secondAttribute="leading" id="CUl-jm-6Kk"/>
+                            <constraint firstItem="2Cm-NO-ckU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Gk0-DS-PXd"/>
+                            <constraint firstItem="2Cm-NO-ckU" firstAttribute="top" secondItem="vnF-i3-Sv4" secondAttribute="bottom" constant="8" id="MYR-9n-KOD"/>
+                            <constraint firstItem="xN4-hc-e8e" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Pcw-UV-IOa"/>
+                            <constraint firstItem="xN4-hc-e8e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RO4-8o-8wG"/>
+                            <constraint firstItem="vnF-i3-Sv4" firstAttribute="trailing" secondItem="xN4-hc-e8e" secondAttribute="trailing" id="WYd-RE-3YW"/>
+                            <constraint firstItem="xN4-hc-e8e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="WgY-O2-qaI"/>
+                            <constraint firstItem="Dlu-E2-mtu" firstAttribute="trailing" secondItem="xN4-hc-e8e" secondAttribute="trailing" id="a97-a5-E4W"/>
+                            <constraint firstItem="Dlu-E2-mtu" firstAttribute="top" secondItem="xN4-hc-e8e" secondAttribute="bottom" constant="8" id="igu-7n-sQ8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Cm-NO-ckU" secondAttribute="bottom" constant="20" id="jhO-kN-nDA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="xN4-hc-e8e" id="chM-3q-MHR"/>
+                        <outlet property="outputImageView" destination="vnF-i3-Sv4" id="L2C-3p-BGW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
